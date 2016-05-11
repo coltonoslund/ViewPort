@@ -11,7 +11,7 @@
 		<meta name="Company" content=""/>
 
 		<title>Drawing1</title>
-		<script src="Drawing1_files/frameset.js" type="text/javascript" language="javascript"></script>
+		<script src="viewport_files/frameset.js" type="text/javascript" language="javascript"></script>
 		<script type="text/javascript" language="javascript" >
 
 function FileEntry (pageIndex, pageID, pageName, priImage, secImage) 
@@ -26,7 +26,8 @@ function FileEntry (pageIndex, pageID, pageName, priImage, secImage)
 var viewMgr = null;
 
 var g_FileList = new  Array(
- new FileEntry (1, 0, "Page-1", "xaml_1.htm", "png_1.htm")
+ new FileEntry (1, 0, "Page-1", "xaml_1.htm", "png_1.htm"),
+ new FileEntry (2, 4, "Page-2", "xaml_2.htm", "png_2.htm")
 
 );
 
@@ -753,15 +754,16 @@ function CreateHLObj (hlNode)
 	</head>
 	
 	<frameset id="frmstOuter" cols="237,*">
-		<frame src="Drawing1_files/toolbar.htm" name="frmToolbar" id="frmToolbar" title="This frame contains tools for manipulating your drawing." frameborder="6" bordercolor="#999999" scrolling="no" marginheight="0" marginwidth="0" >
-		<frame src="Drawing1_files/png_1.htm" name="frmDrawing" title="This frame contains the pages of your drawing." marginheight="10" marginwidth="10" onload="if (parent.isUpLevel) FramePageLoaded()" >
+		<frame src="viewport_files/toolbar.htm" name="frmToolbar" id="frmToolbar" title="This frame contains tools for manipulating your drawing." frameborder="6" bordercolor="#999999" scrolling="no" marginheight="0" marginwidth="0" >
+		<frame src="viewport_files/png_1.htm" name="frmDrawing" title="This frame contains the pages of your drawing." marginheight="10" marginwidth="10" onload="if (parent.isUpLevel) FramePageLoaded()" >
 
 		<noframes>
 			<body>
 
 				<h1>Drawing1</h1>
 				<ul>
-				<li><a href="Drawing1_files/png_1.htm">Page-1</a></li>
+				<li><a href="viewport_files/png_1.htm">Page-1</a></li>
+				<li><a href="viewport_files/png_2.htm">Page-2</a></li>
 
 				</ul>
 			</body>
