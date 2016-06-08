@@ -1,2 +1,3 @@
-FROM dockerreg.coltonoslund.cornerstonenw.com:5000/jenkins-1:1.0
-RUN echo 'Test3 Dockerfile'
+FROM nginx
+RUN rm rm /usr/share/nginx/html/index.html
+ADD . /usr/share/html
